@@ -1,0 +1,53 @@
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(235, 231, 224, 0.884);
+}
+
+.nav-link, .navbar-brand{
+    color: #ffffff !important;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+
+}
+
+.navbar-toggler{
+    color: #ffffff !important;
+    border: none !important;
+    padding: 0;
+    
+}
+
+
+
+
+.container-fluid
+{
+    background-color: #1B3A5C ;
+    padding: 20px 15px;
+}
+
+
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.home-head{
+    background-color: #173452;
+}
+
+.buscar-section{
+    max-width: 90%;
+    min-height: 300px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 15px;
+    border: 1.5px solid rgba(204, 203, 203, 0.812);
+    box-shadow: #fbefda 0px 0px 2px 0px;
+}
+label{
+    color: gray;
+}
+
