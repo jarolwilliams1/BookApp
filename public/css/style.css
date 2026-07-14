@@ -41,13 +41,50 @@ main{
 
 .buscar-section{
     max-width: 90%;
-    min-height: 300px;
+    height: auto;
+    padding: 25px 0;
     background-color: rgb(250, 250, 250);
     border-radius: 15px;
     border: 1.5px solid rgba(204, 203, 203, 0.812);
     box-shadow: #fbefda 0px 0px 2px 0px;
+   
+    
+    justify-content: space-around;
+    
 }
 label{
     color: gray;
+}
+
+.checkbox-container{
+    background-color: transparent;
+  
+    min-height: 50px;
+    padding: 10px;
+     border: 1.5px solid rgba(204, 203, 203, 0.812);
+    box-shadow: #fbefda 0px 0px 2px 0px;
+    max-width: 80%;
+
+
+
+}
+.buscar-Bytitulo{
+    height: 60px;
+    max-width: 80%;
+}
+
+.card-category{
+    color: #1B3A5C;
+    background-color: #fbefda;
+    text-align: center;
+    height: 30px;
+   min-width: 20px;
+      border: 1.5px solid rgba(249, 219, 129, 0.812);
+    box-shadow: #f3e5ccb2 0px 0px 2px 0px;
+    border-radius: 20px;
+   
+
+
+    
 }
 
