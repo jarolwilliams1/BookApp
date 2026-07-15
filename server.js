@@ -23,6 +23,17 @@ app.use(express.static(path.join(__dirname, "public")));
 const homeRouter = require("./routers/homeRouters");
 app.use("/", homeRouter);
 
+const libroRouter = require("./routers/librosRouter");
+app.use("/libros", libroRouter);
+
+
+
+const crearlibroRouter = require("./routers/crearlibroRouter");
+app.use("/crearlibro", crearlibroRouter);
+
+
+const infolibroRouter = require("./routers/infolibroRouter");
+app.use("/info-libro", infolibroRouter);
 
 
 const PORT = 3000;

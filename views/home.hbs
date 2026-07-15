@@ -11,15 +11,15 @@
 
     <form action="" method="get">
     
-    <div class="row">
-    <div class="col-lg-6 col-md-12 ">
+    <div class="row buscar-container">
+    <div class="col-lg-5 col-md-12 ">
 
   <label for="buscar-Bytitulo" class="form-label">Buscar por título</label>
-  <input type="email" class="form-control buscar-Bytitulo" id="buscar-Bytitulo" placeholder="Buscar por titulo del libro..">
+  <input type="text" class="form-control buscar-Bytitulo" id="buscar-Bytitulo" placeholder="Buscar por titulo del libro..">
 
     </div>
 
-    <div class="col-lg-6 col-md-12 ">
+    <div class="col-lg-5 col-md-6 ">
 
         <label for="">Filtrar por categorías</label>
 
@@ -30,10 +30,15 @@
 
 
     </div>
-    <input class="btn btn-primary" type="submit" value="Submit">
 
+  <div class="col-lg-2 col-md-6">
+          <button class="  btn-filtrar   " type="submit"><img src="" alt=""> Filtrar</button>
+
+  </div>
    
   </div>
+
+
 
 
 
@@ -45,8 +50,11 @@
 
 
 <section class="libros">
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  
+     <div class="card" style="width: 18rem;" >
+        <a href="/info-libro">
+
+  <img src="https://th.bing.com/th/id/OIP.bFO9PaEWo12Rznf3cEhKUQHaFE?w=230&h=180&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-year"><img src="" alt=""> 1394</p>
@@ -55,5 +63,7 @@
     <p class="card-editorial"><img src="" alt=""> editorial sudamericana</p>
 
   </div>
+    </a>
+
 </div>
 </section>
