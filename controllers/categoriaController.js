@@ -1,6 +1,6 @@
 const Categoria = require("../models/categoria");
 
-exports.crearCategoria = async (req, res) => {
+const crearCategoria = async (req, res) => {
   try {
     const nuevaCategoria = await Categoria.create({
       nombrecategoria: "accion",
@@ -11,3 +11,12 @@ exports.crearCategoria = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+async function mostrar(req, res) {
+
+
+  res.render("categoria");
+}
+
+module.exports = { mostrar, crearCategoria};
+

@@ -39,10 +39,12 @@ app.use("/info-libro", infolibroRouter);
 const editarlibroRouter = require("./routers/editarlibroRouter");
 app.use("/editarlibro", editarlibroRouter);
 
+const CategoriaRouter = require("./routers/categoriarRouter");
+app.use("/categoria", CategoriaRouter);
+
 // sincronizar BD
 sequelize.sync().then(() => {
   console.log("Base de datos sincronizada");
-  app.listen(3000, () => console.log("Servidor en http://localhost:3000"));
 });
 
 const PORT = 3000;
