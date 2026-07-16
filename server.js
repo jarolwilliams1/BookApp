@@ -36,5 +36,9 @@ const infolibroRouter = require("./routers/infolibroRouter");
 app.use("/info-libro", infolibroRouter);
 
 
+const editarlibroRouter = require("./routers/editarlibroRouter");
+app.use("/editarlibro", editarlibroRouter);
+
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));

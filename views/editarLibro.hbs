@@ -1,0 +1,73 @@
+<h2 class="crearLibro-text">Editar libro</h2>
+<div class="linea-libros"></div>
+
+<section class="editarlibro-section container">
+
+<form action="" method="get">
+
+
+<div class="mb-3 group-input">
+  <label for="titulo-libro" class="form-label">Título del libro <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="titulo-libro" placeholder="Ej. Cien anos de soledad" required>
+</div>
+
+<div class="mb-3  group-input">
+  <label for="ano-pulicacion" class="form-label">Año de publicación <span class="asterisco">*</span></label>
+  <input type="number" class="form-control" id="ano-pulicacion" placeholder="Ej. 1967" required>
+</div>
+
+<div class= " mb-3 vizualizar">
+    <img src="https://th.bing.com/th/id/OIP.bFO9PaEWo12Rznf3cEhKUQHaFE?w=230&h=180&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3" alt="" class="vizualizar-img">
+
+    <div class="vizualizar-text">
+        <h6 class="PORTADA-ACTUAL">PORTADA ACTUAL</h6>
+        <p>Si ingresas una nueva URL, esta portada será reemplazada.</p>
+    </div>
+</div>
+
+<div class="mb-3  group-input">
+  <label for="url-img" class="form-label">URL de la imagen de portada <span class="asterisco">*</span></label>
+  <input type="url" class="form-control" id="url-img" placeholder="https://..." required>
+</div>
+
+<div class="select">
+    <label for="">Categoría <span class="asterisco">*</span></label>
+    <select class="form-select" aria-label="Default select example" required>
+  <option >Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+
+<div class="select">
+    <label for="">Autor <span class="asterisco">*</span></label>
+    <select class="form-select" aria-label="Default select example" required>
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+
+
+<div class="select">
+    <label for="">Editorial <span class="asterisco">*</span></label>
+    <select class="form-select" aria-label="Default select example" required>
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3" >Three</option>
+</select>
+</div>
+
+<div class="botones">
+    <button type="submite" class="btn btn-success btn-crarlibro" >Actualizar libro</button>
+    <a type="button" class="btn btn-outline-secondary bt-cancelar" href="/libros">Cancelar</a>
+
+</div>
+
+
+</form>
+
+</section>

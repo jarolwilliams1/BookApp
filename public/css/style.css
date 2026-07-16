@@ -1,5 +1,6 @@
 
 body{
+    min-height: 100vh;
     padding: 0px;
     margin: 0px;
     background-color: rgba(235, 231, 224, 0.884);
@@ -293,3 +294,115 @@ select{
     padding: 30px;
 }
 
+.contenedor-btn{
+    padding: 10px;
+}
+
+.vizualizar{
+        border: 1.5px solid rgb(217, 210, 198) !important ;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+            border-radius: 10px;
+                background-color: rgba(235, 231, 224, 0.884);
+color: rgb(94, 94, 94);
+
+}
+
+.vizualizar-img{
+    height: 120px;
+    width: 90px;
+    border-radius: 8px;
+}
+
+.vizualizar-text{
+    margin-left: 20px;
+}
+
+.editarlibro-section {
+
+       background-color: #ffffff;
+    max-width: 700px;
+        width: 90%;
+
+    padding: 40px;
+    border-radius: 20px;
+    max-height: 950px;
+   
+          border: 1.5px solid rgb(217, 210, 198) ;
+margin-bottom: 60px;
+}
+
+footer{
+        background-color: #1B3A5C ;
+       height: 80px;
+       color: rgb(201, 201, 201);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 17px;
+       margin-top: 300px;
+       
+       
+      
+       
+
+
+}
+
+
+
+ main {
+      flex: 1; /* ocupa todo el espacio disponible */
+    }
+
+.footer-text{
+    margin-top: 20px;
+}
+
+.eliminar-libro{
+    z-index: 99;
+    background-color: white;
+    height: 420px;
+    width: 650px;
+   
+    margin-top: -15%;
+   text-align: center;
+   border-radius: 15px;
+   border-top: solid 13px red;
+}
+
+.pregunta{
+    font-family:Cooper Black;
+    font-size: 30px;
+    
+
+}
+
+
+.p-pregunta{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.nombre-libro{
+        font-size: 25px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text-card-eliminar-libro{
+    margin-top: 80px;
+}
+
+.advertencia{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.btn-eliminar-libro-card, .btn-cancelar-libro-card{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 20px;
+padding: 10px;
+}
