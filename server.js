@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const { engine } = require("express-handlebars");
 const sequelize = require("./config/db");
+require("./models/asociaciones");
 const app = express();
 
 app.engine("hbs", engine({
@@ -42,44 +43,11 @@ app.use("/editarlibro", editarlibroRouter);
 const CategoriaRouter = require("./routers/categoriarRouter");
 app.use("/categoria", CategoriaRouter);
 
-const crearCategoriaRouter = require("./routers/crearCategoriaRouter");
-app.use("/crear-categoria", crearCategoriaRouter);
+const autoresRouter = require("./routers/autoresRouter");
+app.use("/autores", autoresRouter);
 
-const editarCategoriaRouter = require("./routers/editarCategoriaRouter");
-app.use("/editar-categoria", editarCategoriaRouter);
-
-
-const autorRouter = require("./routers/autorRouter");
-app.use("/autores", autorRouter);
-
-
-
-const crearAutorRouter = require("./routers/crearAutorRouter");
-app.use("/crear-autor", crearAutorRouter);
-
-
-
-const editarAutorRouter = require("./routers/editarAutorRouter");
-app.use("/editar-autor", editarAutorRouter);
-
-
-
-const editorialRouter = require("./routers/editorialRouter");
-app.use("/editoriales", editorialRouter);
-
-
-const crearEditorialRouter = require("./routers/crearEditorialRouter");
-app.use("/crear-editorial", crearEditorialRouter);
-
-
-
-const editarEditorialRouter = require("./routers/editarEditorialRouter");
-app.use("/editar-editorial", editarEditorialRouter);
-
-
-
-
-
+const editorialesRouter = require("./routers/editorialesRouter");
+app.use("/editoriales", editorialesRouter);
 
 // sincronizar BD
 sequelize.sync().then(() => {

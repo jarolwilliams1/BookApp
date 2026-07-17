@@ -1,0 +1,44 @@
+<h2 class="crearLibro-text">Detalle del libro</h2>
+<div class="linea-libros"></div>
+
+<section class="editarlibro-section container">
+
+  <div class="mb-3 vizualizar">
+    <img src="{{libro.urlimagen}}" alt="" class="vizualizar-img">
+
+    <div class="vizualizar-text">
+      <h6 class="PORTADA-ACTUAL">{{libro.titulo}}</h6>
+      <p>Año de publicación: {{libro.year}}</p>
+    </div>
+  </div>
+
+  <div class="mb-3 group-input">
+    <label class="form-label">Categoría</label>
+    <p>{{libro.categoria.nombrecategoria}}</p>
+  </div>
+
+  <div class="mb-3 group-input">
+    <label class="form-label">Autor</label>
+    <p>{{libro.autor.nombreautor}}</p>
+  </div>
+
+  <div class="mb-3 group-input">
+    <label class="form-label">Editorial</label>
+    <p>{{libro.editorial.nombreeditorial}}</p>
+  </div>
+
+  <div class="mb-3 group-input">
+    <label class="form-label">País de la editorial</label>
+    <p>{{libro.editorial.paiseditorial}}</p>
+  </div>
+
+  <div class="mb-3 group-input">
+    <label class="form-label">Teléfono de la editorial</label>
+    <p>{{libro.editorial.telefonoeditorial}}</p>
+  </div>
+
+  <div class="botones">
+    <a type="button" class="btn btn-outline-secondary bt-cancelar" href="/">Volver</a>
+  </div>
+
+</section>

@@ -1,30 +1,24 @@
 <h2 class="crearLibro-text">Editar autor</h2>
 <div class="linea-libros"></div>
 
-<section class="crearlibro-section container">
+<section class="editarlibro-section container">
 
-<form action="" method="get">
-
-
-<div class="mb-3 group-input">
-  <label for="titulo-libro" class="form-label">Nombre del autor <span class="asterisco">*</span></label>
-  <input type="text" class="form-control" id="titulo-libro" placeholder="Ej. Gabriel Garcia Marquez" required>
-</div>
-
+<form action="/autores/editar/{{autor.autorid}}" method="post">
 
 <div class="mb-3 group-input">
-  <label for="titulo-libro" class="form-label">Correo del autor <span class="asterisco">*</span></label>
-  <input type="email" class="form-control" id="titulo-libro" placeholder="autor@ejemplo.com" required>
+  <label for="nombre-autor" class="form-label">Nombre del autor <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="nombre-autor" name="nombreautor" value="{{autor.nombreautor}}" required>
 </div>
 
-
+<div class="mb-3 group-input">
+  <label for="correo-autor" class="form-label">Correo <span class="asterisco">*</span></label>
+  <input type="email" class="form-control" id="correo-autor" name="correoautor" value="{{autor.correoautor}}" required>
+</div>
 
 <div class="botones">
-    <button type="submite" class="btn btn-success btn-crarlibro" >Guardar categoria</button>
+    <button type="submit" class="btn btn-success btn-crarlibro" >Guardar autor</button>
     <a type="button" class="btn btn-outline-secondary bt-cancelar" href="/autores">Cancelar</a>
-
 </div>
-
 
 </form>
 

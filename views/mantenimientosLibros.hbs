@@ -11,7 +11,7 @@
 
 <section class="libros-container">
     <div class="head-libros">
-        <p class="registros-libros"> 1 registro</p>
+        <p class="registros-libros"> {{cantidad}} registro(s)</p>
         <a type="button" class="btn btn-success btn-crearlibro" href="/crearlibro">+ Crear libro nuevo</a>
 
     </div>
@@ -30,20 +30,26 @@
   </thead>
 
   <tbody>
+    {{#each libros}}
     <tr>
       <td>
-        <img class="img-libro" src="https://th.bing.com/th/id/OIP.bFO9PaEWo12Rznf3cEhKUQHaFE?w=230&h=180&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3" alt="">
+        <img class="img-libro" src="{{urlimagen}}" alt="">
       </td>
-      <td>cien anos de soledad</td>
-      <td>1928</td>
-      <td><div class="category-libro-table">realismo</div></td>
-      <td>gabriel garcia marquone</td>
-      <td>editorial sudamericana</td>
+      <td>{{titulo}}</td>
+      <td>{{year}}</td>
+      <td><div class="category-libro-table">{{categoria.nombrecategoria}}</div></td>
+      <td>{{autor.nombreautor}}</td>
+      <td>{{editorial.nombreeditorial}}</td>
       <td class="contenedor-btn">
-        <a type="button" class="btn btn-warning" href="/editarlibro">Editar</a>
-        <button type="button" class="btn btn-danger" id="eliminar-libro-btn">Eliminar</button>
+        <a type="button" class="btn btn-warning" href="/editarlibro/{{libroid}}">Editar</a>
+        <button type="button" class="btn btn-danger eliminar-libro-btn" data-eliminar-url="/libros/eliminar/{{libroid}}" data-eliminar-nombre="{{titulo}}">Eliminar</button>
       </td>
     </tr>
+    {{else}}
+    <tr>
+      <td colspan="7">No hay libros registrados.</td>
+    </tr>
+    {{/each}}
   </tbody>
 </table>
 
@@ -53,13 +59,15 @@
  <div class="text-card-eliminar-libro">
    <h3 class="pregunta">¿Eliminar este registro?</h3>
   <p class="p-pregunta">¿Está seguro que desea eliminar este libro?</p>
-  <h4 class="nombre-libro">"Cien años de soledad"</h4>
+  <h4 class="nombre-libro" id="nombre-libro-seleccionado"></h4>
   <p class="advertencia">Esta acción no puede deshacerse.</p>
 
  </div>
   <div class="btns-eliminar-card">
     <button type="button" class="btn btn-secondary btn-eliminar-libro-card" id="btn-cancelar-libro-card">Cancelar</button>
-<button type="button" class="btn btn-danger btn-cancelar-libro-card" id="btn-eliminar-libro-card">Aceptar, eliminar</button>
+    <form id="form-eliminar-libro" action="" method="post">
+      <button type="submit" class="btn btn-danger btn-cancelar-libro-card" id="btn-eliminar-libro-card">Aceptar, eliminar</button>
+    </form>
 
   </div>
 </div>

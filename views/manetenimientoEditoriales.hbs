@@ -1,61 +1,61 @@
-
 <div class="text-libros-container">
     <h2 class="title-libros">Mantenimiento de Editoriales</h2>
-<p class="p-libros">Administra las editoriales asociadas al catálogo.</p>
+<p class="p-libros">Gestión completa de las editoriales del catálogo.</p>
 </div>
 
 <div class="linea-libros"></div>
 
-
 <section class="libros-container">
     <div class="head-libros">
-        <p class="registros-libros"> 1 registro</p>
-        <a type="button" class="btn btn-success btn-crearlibro" href="/crear-editorial">+ Crear editorial nueva</a>
-
+        <p class="registros-libros"> {{editoriales.length}} registro(s)</p>
+        <a type="button" class="btn btn-success btn-crearlibro" href="/editoriales/crear">+ Crear editorial nueva</a>
     </div>
 
    <table class="libros-tabla">
   <thead>
     <tr class="tr-th">
-      <th>Nombre de la editorial</th>
-      <th>Teléfono</th>
-      <th>País</th>
-      <th>Libros asociados</th>
+      <th>NOMBRE</th>
+      <th>TELÉFONO</th>
+      <th>PAÍS</th>
+      <th>LIBROS</th>
       <th>ACCIONES</th>
     </tr>
   </thead>
 
   <tbody>
+    {{#each editoriales}}
     <tr>
-     
-      <td>Editorial Sudamericana</td>
-      <td>+54 11 4322-8888</td>
-      <td>Argentina</td>
-      <td><div class="category-libro-table">1</div></td>
+      <td>{{nombreeditorial}}</td>
+      <td>{{telefonoeditorial}}</td>
+      <td>{{paiseditorial}}</td>
+      <td>{{cantidadLibros}}</td>
       <td class="contenedor-btn">
-        <a type="button" class="btn btn-warning" href="/editar-editorial">Editar</a>
-        <button type="button" class="btn btn-danger" id="eliminar-libro-btn">Eliminar</button>
+        <a type="button" class="btn btn-warning" href="/editoriales/editar/{{editorialid}}">Editar</a>
+        <button type="button" class="btn btn-danger eliminar-editorial-btn" data-eliminar-url="/editoriales/eliminar/{{editorialid}}" data-eliminar-nombre="{{nombreeditorial}}">Eliminar</button>
       </td>
     </tr>
+    {{else}}
+    <tr>
+      <td colspan="5">No hay editoriales registradas.</td>
+    </tr>
+    {{/each}}
   </tbody>
 </table>
 
-<div class="eliminar-libro" id="eliminar-libro-card" hidden >
+<div class="eliminar-libro" id="eliminar-editorial-card" hidden >
 
-  
  <div class="text-card-eliminar-libro">
    <h3 class="pregunta">¿Eliminar este registro?</h3>
-  <p class="p-pregunta">¿Está seguro que desea eliminar este libro?</p>
-  <h4 class="nombre-libro">"Cien años de soledad"</h4>
+  <p class="p-pregunta">¿Está seguro que desea eliminar esta editorial?</p>
+  <h4 class="nombre-libro" id="nombre-editorial-seleccionada"></h4>
   <p class="advertencia">Esta acción no puede deshacerse.</p>
-
  </div>
   <div class="btns-eliminar-card">
-    <button type="button" class="btn btn-secondary btn-eliminar-libro-card" id="btn-cancelar-libro-card">Cancelar</button>
-<button type="button" class="btn btn-danger btn-cancelar-libro-card" id="btn-eliminar-libro-card">Aceptar, eliminar</button>
-
+    <button type="button" class="btn btn-secondary btn-eliminar-libro-card" id="btn-cancelar-editorial-card">Cancelar</button>
+    <form id="form-eliminar-editorial" action="" method="post">
+      <button type="submit" class="btn btn-danger btn-cancelar-libro-card" id="btn-eliminar-editorial-card">Aceptar, eliminar</button>
+    </form>
   </div>
 </div>
 
 </section>
-

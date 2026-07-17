@@ -1,36 +1,29 @@
 <h2 class="crearLibro-text">Editar editorial</h2>
 <div class="linea-libros"></div>
 
-<section class="crearlibro-section container">
+<section class="editarlibro-section container">
 
-<form action="" method="get">
-
-
-<div class="mb-3 group-input">
-  <label for="titulo-libro" class="form-label">Nombre de la editorial <span class="asterisco">*</span></label>
-  <input type="text" class="form-control" id="titulo-libro" placeholder="Editorial Sudamericana" required>
-</div>
-
+<form action="/editoriales/editar/{{editorial.editorialid}}" method="post">
 
 <div class="mb-3 group-input">
-  <label for="titulo-libro" class="form-label">Teléfono  <span class="asterisco">*</span></label>
-  <input type="text" class="form-control" id="titulo-libro" placeholder="+54 11 4322-8888" required>
+  <label for="nombre-editorial" class="form-label">Nombre de la editorial <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="nombre-editorial" name="nombreeditorial" value="{{editorial.nombreeditorial}}" required>
 </div>
-
 
 <div class="mb-3 group-input">
-  <label for="titulo-libro" class="form-label">País de la editorial  <span class="asterisco">*</span></label>
-  <input type="text" class="form-control" id="titulo-libro" placeholder="argentina" required>
+  <label for="telefono-editorial" class="form-label">Teléfono <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="telefono-editorial" name="telefonoeditorial" value="{{editorial.telefonoeditorial}}" required>
 </div>
 
-
+<div class="mb-3 group-input">
+  <label for="pais-editorial" class="form-label">País <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="pais-editorial" name="paiseditorial" value="{{editorial.paiseditorial}}" required>
+</div>
 
 <div class="botones">
-    <button type="submite" class="btn btn-success btn-crarlibro" >Guardar categoria</button>
+    <button type="submit" class="btn btn-success btn-crarlibro" >Guardar editorial</button>
     <a type="button" class="btn btn-outline-secondary bt-cancelar" href="/editoriales">Cancelar</a>
-
 </div>
-
 
 </form>
 

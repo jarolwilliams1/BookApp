@@ -2,12 +2,13 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
 
-const editorialmodel = sequelize.define('categoria',{
-    " EditorialID": {type:DataTypes.INTEGER, primaryKey:true, autoIncrement: true
+const editorialmodel = sequelize.define('editorial',{
+    "editorialid": {type:DataTypes.INTEGER, primaryKey:true, autoIncrement: true
 },
-    "NombreEditorial":DataTypes.STRING,
-    "TelefonoEditorial": DataTypes.STRING,
-    "PaisEditorial": DataTypes.STRING
+    "nombreeditorial":DataTypes.STRING,
+    "telefonoeditorial": DataTypes.STRING,
+    "paiseditorial": DataTypes.STRING
+
 
 })
 

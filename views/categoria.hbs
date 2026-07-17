@@ -1,57 +1,25 @@
-<div class="text-libros-container">
-    <h2 class="title-libros">Mantenimiento de categorias</h2>
-<p class="p-libros">.</p>
-</div>
-
+<h2 class="crearLibro-text">Crear nueva categoría</h2>
 <div class="linea-libros"></div>
 
+<section class="crearlibro-section container">
 
-<section class="libros-container">
-    <div class="head-libros">
-        <p class="registros-libros"> 1 registro</p>
-        <a type="button" class="btn btn-success btn-crearlibro" href="/crear-categoria">+ Crear categoria nueva</a>
+<form action="/categoria/crear" method="post">
 
-    </div>
-
-   <table class="libros-tabla">
-  <thead>
-    <tr class="tr-th">
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Libros asociados</th>
-      <th>ACCIONES</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      
-      <td>Ficción literaria</td>
-      <td>Narrativa de alto valor estético y literario que explora la condición humana.</td>
-      <td><div class="category-libro-table">2</div></td>
-      <td class="contenedor-btn">
-        <a type="button" class="btn btn-warning" href="/editar-categoria">Editar</a>
-        <button type="button" class="btn btn-danger" id="eliminar-libro-btn">Eliminar</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="eliminar-libro" id="eliminar-libro-card" hidden >
-
-  
- <div class="text-card-eliminar-libro">
-   <h3 class="pregunta">¿Eliminar este registro?</h3>
-  <p class="p-pregunta">¿Está seguro que desea eliminar este libro?</p>
-  <h4 class="nombre-libro">"Cien años de soledad"</h4>
-  <p class="advertencia">Esta acción no puede deshacerse.</p>
-
- </div>
-  <div class="btns-eliminar-card">
-    <button type="button" class="btn btn-secondary btn-eliminar-libro-card" id="btn-cancelar-libro-card">Cancelar</button>
-<button type="button" class="btn btn-danger btn-cancelar-libro-card" id="btn-eliminar-libro-card">Aceptar, eliminar</button>
-
-  </div>
+<div class="mb-3 group-input">
+  <label for="nombre-categoria" class="form-label">Nombre de la categoría <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="nombre-categoria" name="nombrecategoria" placeholder="Ej. Realismo mágico" required>
 </div>
+
+<div class="mb-3 group-input">
+  <label for="descripcion-categoria" class="form-label">Descripción <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="descripcion-categoria" name="descripcioncategoria" placeholder="Ej. Libros del género realismo mágico" required>
+</div>
+
+<div class="botones">
+    <button type="submit" class="btn btn-success btn-crarlibro" >Crear categoría</button>
+    <a type="button" class="btn btn-outline-secondary bt-cancelar" href="/categoria">Cancelar</a>
+</div>
+
+</form>
 
 </section>

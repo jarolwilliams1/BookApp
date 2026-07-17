@@ -2,14 +2,15 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
 
-const autoramodel = sequelize.define('categoria',{
-    " AutorID": {type:DataTypes.INTEGER, primaryKey:true, autoIncrement: true
+const autormodel = sequelize.define('autor',{
+    "autorid": {type:DataTypes.INTEGER, primaryKey:true, autoIncrement: true
 },
-    "NombreAutor":DataTypes.STRING,
-    "CorreoAutor": DataTypes.STRING
+    "nombreautor":DataTypes.STRING,
+    "correoautor": DataTypes.STRING
 
 
 })
 
 
-module.exports = autoramodel;
+module.exports = autormodel;
+

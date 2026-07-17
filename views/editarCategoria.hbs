@@ -1,29 +1,24 @@
-<h2 class="crearLibro-text">Editar Categoria</h2>
+<h2 class="crearLibro-text">Editar categoría</h2>
 <div class="linea-libros"></div>
 
-<section class="crearlibro-section container">
+<section class="editarlibro-section container">
 
-<form action="" method="get">
-
+<form action="/categoria/editar/{{categoria.categoriaid}}" method="post">
 
 <div class="mb-3 group-input">
-  <label for="titulo-libro" class="form-label">Nombre de la categoría <span class="asterisco">*</span></label>
-  <input type="text" class="form-control" id="titulo-libro" placeholder="Ej. Ciencia Ficcion" required>
+  <label for="nombre-categoria" class="form-label">Nombre de la categoría <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="nombre-categoria" name="nombrecategoria" value="{{categoria.nombrecategoria}}" required>
 </div>
 
-  <label for="titulo-libro" class="form-label">Título del libro <span class="asterisco">*</span></label>
-
-<div class="form-floating">
-  <textarea class="form-control " placeholder="Describe brevemente esta categoria literaria..." id="floatingTextarea2"  style="height: 130px" required></textarea>
-  <label for="floatingTextarea2">Describe brevemente esta categoria literaria...</label>
+<div class="mb-3 group-input">
+  <label for="descripcion-categoria" class="form-label">Descripción <span class="asterisco">*</span></label>
+  <input type="text" class="form-control" id="descripcion-categoria" name="descripcioncategoria" value="{{categoria.descripcioncategoria}}" required>
 </div>
 
 <div class="botones">
-    <button type="submite" class="btn btn-success btn-crarlibro" >Guardar categoria</button>
+    <button type="submit" class="btn btn-success btn-crarlibro" >Guardar categoría</button>
     <a type="button" class="btn btn-outline-secondary bt-cancelar" href="/categoria">Cancelar</a>
-
 </div>
-
 
 </form>
 
