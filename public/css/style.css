@@ -121,10 +121,18 @@ label{
     padding: 10px;
      border: 1.5px solid rgba(204, 203, 203, 0.812);
     box-shadow: #fbefda 0px 0px 2px 0px;
-    max-width: 80%;
+   min-width: 80%;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 
 
 
+}
+
+.form-check{
+    margin-right: 15px;
 }
 .buscar-Bytitulo{
     height: 60px;
@@ -405,4 +413,9 @@ footer{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: 20px;
 padding: 10px;
+}
+
+.form-control{
+        border: 1.5px solid rgb(217, 210, 198) !important ;
+
 }
