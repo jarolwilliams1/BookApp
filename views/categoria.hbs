@@ -1,1 +1,57 @@
-<h2>mantenimiento de categoria</h2>
+<div class="text-libros-container">
+    <h2 class="title-libros">Mantenimiento de categorias</h2>
+<p class="p-libros">.</p>
+</div>
+
+<div class="linea-libros"></div>
+
+
+<section class="libros-container">
+    <div class="head-libros">
+        <p class="registros-libros"> 1 registro</p>
+        <a type="button" class="btn btn-success btn-crearlibro" href="/crear-categoria">+ Crear categoria nueva</a>
+
+    </div>
+
+   <table class="libros-tabla">
+  <thead>
+    <tr class="tr-th">
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Libros asociados</th>
+      <th>ACCIONES</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      
+      <td>Ficción literaria</td>
+      <td>Narrativa de alto valor estético y literario que explora la condición humana.</td>
+      <td><div class="category-libro-table">2</div></td>
+      <td class="contenedor-btn">
+        <a type="button" class="btn btn-warning" href="/editar-categoria">Editar</a>
+        <button type="button" class="btn btn-danger" id="eliminar-libro-btn">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="eliminar-libro" id="eliminar-libro-card" hidden >
+
+  
+ <div class="text-card-eliminar-libro">
+   <h3 class="pregunta">¿Eliminar este registro?</h3>
+  <p class="p-pregunta">¿Está seguro que desea eliminar este libro?</p>
+  <h4 class="nombre-libro">"Cien años de soledad"</h4>
+  <p class="advertencia">Esta acción no puede deshacerse.</p>
+
+ </div>
+  <div class="btns-eliminar-card">
+    <button type="button" class="btn btn-secondary btn-eliminar-libro-card" id="btn-cancelar-libro-card">Cancelar</button>
+<button type="button" class="btn btn-danger btn-cancelar-libro-card" id="btn-eliminar-libro-card">Aceptar, eliminar</button>
+
+  </div>
+</div>
+
+</section>
